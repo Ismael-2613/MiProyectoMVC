@@ -21,7 +21,6 @@ C:\Users\usuario\Downloads\demo\demo\MiProyectoMVC\obj\Debug\net10.0\rjsmcshtml.
 C:\Users\usuario\Downloads\demo\demo\MiProyectoMVC\obj\Debug\net10.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 C:\Users\usuario\Downloads\demo\demo\MiProyectoMVC\obj\Debug\net10.0\scopedcss\bundle\MiProyectoMVC.styles.css
 C:\Users\usuario\Downloads\demo\demo\MiProyectoMVC\obj\Debug\net10.0\scopedcss\projectbundle\MiProyectoMVC.bundle.scp.css
-C:\Users\usuario\Downloads\demo\demo\MiProyectoMVC\obj\Debug\net10.0\compressed\6wz03i9925-{0}-b9sayid5wm-b9sayid5wm.gz
 C:\Users\usuario\Downloads\demo\demo\MiProyectoMVC\obj\Debug\net10.0\compressed\5xqa30auqf-{0}-61n19gt1b8-61n19gt1b8.gz
 C:\Users\usuario\Downloads\demo\demo\MiProyectoMVC\obj\Debug\net10.0\compressed\z4kqtgpqmk-{0}-xtxxf3hu2r-xtxxf3hu2r.gz
 C:\Users\usuario\Downloads\demo\demo\MiProyectoMVC\obj\Debug\net10.0\compressed\qor6eqkot4-{0}-bqjiyaj88i-bqjiyaj88i.gz
@@ -129,3 +128,5 @@ C:\Users\usuario\Downloads\demo\demo\MiProyectoMVC\bin\Debug\net10.0\runtimes\wi
 C:\Users\usuario\Downloads\demo\demo\MiProyectoMVC\bin\Debug\net10.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
 C:\Users\usuario\Downloads\demo\demo\MiProyectoMVC\bin\Debug\net10.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
 C:\Users\usuario\Downloads\demo\demo\MiProyectoMVC\obj\Debug\net10.0\MiProyec.25A7C8E8.Up2Date
+C:\Users\usuario\Downloads\demo\demo\MiProyectoMVC\obj\Debug\net10.0\MiProyectoMVC.sourcelink.json
+C:\Users\usuario\Downloads\demo\demo\MiProyectoMVC\obj\Debug\net10.0\compressed\6wz03i9925-{0}-iig0n2savx-iig0n2savx.gz
