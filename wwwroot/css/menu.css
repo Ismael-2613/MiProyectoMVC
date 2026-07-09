@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #1a1a2e;
+    min-height: 100vh;
+    color: #e0e0e0;
+}
+
+/* NAVBAR */
+.navbar {
+    background: #16213e;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #00b4d8;
+    box-shadow: 0 2px 20px rgba(0, 180, 216, 0.2);
+}
+
+.navbar .logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.navbar .logo span {
+    font-size: 22px;
+    font-weight: 700;
+    color: #00b4d8;
+    letter-spacing: 1px;
+}
+
+.navbar .logo .version {
+    font-size: 11px;
+    color: #888;
+    background: #0f3460;
+    padding: 2px 8px;
+    border-radius: 10px;
+}
+
+.navbar .nav-links {
+    display: flex;
+    gap: 24px;
+    list-style: none;
+}
+
+.navbar .nav-links a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.navbar .nav-links a:hover {
+    color: #00b4d8;
+}
+
+/* HERO */
+.hero {
+    text-align: center;
+    padding: 80px 20px 60px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    font-weight: 800;
+    color: #00b4d8;
+    text-shadow: 0 0 30px rgba(0, 180, 216, 0.4);
+    margin-bottom: 16px;
+}
+
+.hero p {
+    font-size: 18px;
+    color: #888;
+    max-width: 500px;
+    margin: 0 auto 40px;
+}
+
+.hero .badge {
+    display: inline-block;
+    background: #0f3460;
+    color: #00b4d8;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 13px;
+    margin-bottom: 40px;
+    border: 1px solid #00b4d8;
+}
+
+/* CARDS */
+.cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+    padding: 0 40px 60px;
+}
+
+.card {
+    background: #16213e;
+    border: 1px solid #0f3460;
+    border-radius: 12px;
+    padding: 30px;
+    width: 220px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.card:hover {
+    border-color: #00b4d8;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 180, 216, 0.2);
+}
+
+.card .icon {
+    font-size: 40px;
+    margin-bottom: 16px;
+}
+
+.card h3 {
+    font-size: 16px;
+    color: #e0e0e0;
+    margin-bottom: 8px;
+}
+
+.card p {
+    font-size: 13px;
+    color: #666;
+}
+
+/* FOOTER */
+.footer {
+    text-align: center;
+    padding: 20px;
+    color: #444;
+    font-size: 13px;
+    border-top: 1px solid #0f3460;
+}

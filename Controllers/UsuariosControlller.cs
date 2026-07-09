@@ -31,6 +31,10 @@ public class UsuariosController : Controller
         return View();
     }
 
+    public IActionResult Menu()
+    {
+        return View();
+    }
 
     // Recibe los datos 
     [HttpPost]
@@ -49,6 +53,8 @@ public class UsuariosController : Controller
         }
     }
 
+    
+
     public IActionResult Login(ClsUsuarios usuario)
     {
         using (SqlConnection conn = _db.ObtenerConexion())
@@ -64,7 +70,7 @@ public class UsuariosController : Controller
             {
                 // Usuario autenticado correctamente
                 ViewBag.Mensaje = "Inicio de sesión exitoso";
-                return View();
+                return RedirectToAction("Menu");
             }
             else
             {

@@ -130,3 +130,4 @@ C:\Users\usuario\Downloads\demo\demo\MiProyectoMVC\bin\Debug\net10.0\runtimes\wi
 C:\Users\usuario\Downloads\demo\demo\MiProyectoMVC\obj\Debug\net10.0\MiProyec.25A7C8E8.Up2Date
 C:\Users\usuario\Downloads\demo\demo\MiProyectoMVC\obj\Debug\net10.0\MiProyectoMVC.sourcelink.json
 C:\Users\usuario\Downloads\demo\demo\MiProyectoMVC\obj\Debug\net10.0\compressed\6wz03i9925-{0}-iig0n2savx-iig0n2savx.gz
+C:\Users\usuario\Downloads\demo\demo\MiProyectoMVC\obj\Debug\net10.0\compressed\pm734ttk4a-{0}-1rn4ois9qg-1rn4ois9qg.gz
