@@ -1,0 +1,46 @@
+@model MiProyectoMVC.Models.ClsUsuarios
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="/css/site.css" />
+</head>
+<body>
+    <div class="card">
+        <h2>Iniciar sesión</h2>
+        <p class="subtitle">Bienvenido de vuelta</p>
+
+        @if (ViewBag.Error != null)
+        {
+            <p class="error">@ViewBag.Error</p>
+        }
+
+        @if (ViewBag.Mensaje != null)
+        {
+            <p class="success">@ViewBag.Mensaje</p>
+        }
+
+        <form asp-action="Login" method="post">
+            <div class="form-group">
+                <label>Usuario</label>
+                <input asp-for="Tbl_Username" placeholder="Escribe tu usuario" />
+            </div>
+            <div class="form-group">
+                <label>Password</label>
+                <input asp-for="Tbl_Pass" type="password" placeholder="Escribe tu contraseña" />
+            </div>
+            <button type="submit">Ingresar</button>
+        </form>
+
+        <p style="text-align:center; margin-top:16px; font-size:14px; color:#888;">
+            ¿No tienes cuenta? 
+            <a href="/Usuarios/Registrar" style="color:#667eea;">Regístrate</a>
+        </p>
+    </div>
+</body>
+</html>

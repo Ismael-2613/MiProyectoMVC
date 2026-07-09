@@ -35,7 +35,10 @@
                 <input asp-for="Tbl_Pass" type="password" placeholder="Password" />
             </div>
 
+            
             <button type="submit">Registrar</button>
+            <button type="button" onclick="window.location.href='@Url.Action("Login", "Usuarios")'">Login</button>
+
         </form>
     </div>
 </body>

@@ -25,6 +25,13 @@ public class UsuariosController : Controller
         return View();
     }
 
+    [HttpGet]
+    public IActionResult Login()
+    {
+        return View();
+    }
+
+
     // Recibe los datos 
     [HttpPost]
     public IActionResult Registrar(ClsUsuarios usuario)
@@ -39,6 +46,32 @@ public class UsuariosController : Controller
 
             ViewBag.Mensaje = "Usuario registrado exitosamente";
             return View();
+        }
+    }
+
+    public IActionResult Login(ClsUsuarios usuario)
+    {
+        using (SqlConnection conn = _db.ObtenerConexion())
+        {
+            SqlCommand cmd = new SqlCommand("SP_Login", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@User", usuario.Tbl_Username);
+            cmd.Parameters.AddWithValue("@Pass", usuario.Tbl_Pass);
+
+            SqlDataReader reader = cmd.ExecuteReader();
+
+            if (reader.Read())
+            {
+                // Usuario autenticado correctamente
+                ViewBag.Mensaje = "Inicio de sesión exitoso";
+                return View();
+            }
+            else
+            {
+                // Credenciales incorrectas
+                ViewBag.Mensaje = "Usuario o contraseña incorrectos";
+                return View();
+            }
         }
     }
 }
