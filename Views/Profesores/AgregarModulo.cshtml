@@ -1,0 +1,64 @@
+@model MiProyectoMVC.Models.Modulos.ClsModulosRequest
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Agregar Módulo - CodeLab Academy</title>
+    <link rel="stylesheet" href="/css/menu.css" />
+    <link rel="stylesheet" href="/css/estilos.css" />
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+            <span>💻 CodeLab Academy</span>
+            <span class="version">v1.0.0</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="/Usuarios/MenuProfesores">Inicio</a></li>
+            <li><a href="/Usuarios/Login">Cerrar sesión</a></li>
+        </ul>
+    </nav>
+
+    <div style="display:flex; justify-content:center; align-items:center; min-height:80vh;">
+        <div class="card">
+            <h2>📁 Agregar Módulo</h2>
+            <p class="subtitle">Crea un nuevo módulo para el curso</p>
+
+            @if (ViewBag.Error != null)
+            {
+                <div class="error">❌ @ViewBag.Error</div>
+            }
+
+            <form asp-action="AgregarModulo" method="post">
+                <input type="hidden" name="Tbl_Fk_Id_Curso" value="@ViewBag.IdCurso" />
+
+                <div class="form-group">
+                    <label>Nombre del módulo</label>
+                    <input asp-for="Tbl_Nombre" placeholder="Ej: Módulo 1 - Introducción" />
+                </div>
+
+                <div class="form-group">
+                    <label>Descripción</label>
+                    <input asp-for="Tbl_Descripcion" placeholder="Descripción del módulo" />
+                </div>
+
+                <div class="form-group">
+                    <label>Orden</label>
+                    <input asp-for="Tbl_Orden" type="number" placeholder="1, 2, 3..." />
+                </div>
+
+                <button type="submit">Agregar Módulo</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html>

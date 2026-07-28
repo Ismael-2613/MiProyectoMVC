@@ -12,7 +12,7 @@ public class UsuariosController : Controller
     private readonly ClsAccesoDatos _db;
 
     // Constructor que inyecta clsAccesoDatos
-    public UsuariosController (ClsAccesoDatos db)
+    public UsuariosController(ClsAccesoDatos db)
     {
         _db = db;
     }
@@ -31,9 +31,17 @@ public class UsuariosController : Controller
         return View();
     }
 
-    public IActionResult Menu()
+    [HttpGet]
+    public IActionResult MenuEstudiantes()
     {
-        return View();
+        return View("~/Views/Estudiantes/MenuEstudiante.cshtml");
+    }
+
+    [HttpGet]
+    public IActionResult MenuProfesores()
+    {
+        return View("~/Views/Profesores/MenuProfesores.cshtml");
+
     }
 
     // Recibe los datos 
@@ -53,8 +61,6 @@ public class UsuariosController : Controller
         }
     }
 
-    
-
     public IActionResult Login(ClsUsuarios usuario)
     {
         using (SqlConnection conn = _db.ObtenerConexion())
@@ -63,21 +69,27 @@ public class UsuariosController : Controller
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("@User", usuario.Tbl_Username);
             cmd.Parameters.AddWithValue("@Pass", usuario.Tbl_Pass);
-
             SqlDataReader reader = cmd.ExecuteReader();
-
             if (reader.Read())
             {
-                // Usuario autenticado correctamente
-                ViewBag.Mensaje = "Inicio de sesión exitoso";
-                return RedirectToAction("Menu");
+                string rol = reader["Tbl_Rol"].ToString();
+                string email = reader["Tbl_Username"].ToString();
+
+                HttpContext.Session.SetString("Email", email);
+                HttpContext.Session.SetString("Rol", rol);
+
+                if (rol == "Profesor")
+                    return RedirectToAction("MenuProfesores", "Usuarios");
+                else
+                    return RedirectToAction("MenuEstudiantes", "Usuarios");
             }
             else
             {
-                // Credenciales incorrectas
                 ViewBag.Mensaje = "Usuario o contraseña incorrectos";
                 return View();
             }
         }
     }
+
+
 }

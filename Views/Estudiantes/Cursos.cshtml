@@ -1,0 +1,62 @@
+@model List<MiProyectoMVC.Models.ClsCursos>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Cursos - CodeLab Academy</title>
+    <link rel="stylesheet" href="/css/menu.css" />
+    <link rel="stylesheet" href="/css/cursos.css" />
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+            <span>💻 CodeLab Academy</span>
+            <span class="version">v1.0.0</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="/Usuarios/MenuEstudiante">Inicio</a></li>
+            <li><a href="/Estudiantes/Cursos">Cursos</a></li>
+            <li><a href="/Usuarios/Login">Cerrar sesión</a></li>
+        </ul>
+    </nav>
+
+    <div class="cursos-container">
+        <h2>📚 Cursos Disponibles</h2>
+        <p class="subtitle">Selecciona un curso para matricularte</p>
+
+        <div class="cursos-grid">
+            @foreach (var curso in Model)
+{
+    <div class="curso-card">
+        <div class="curso-icon">💻</div>
+        <h3>@curso.Tbl_Nombre</h3>
+        <p>@curso.Tbl_Descripcion</p>
+        <div class="curso-info">
+            <span class="badge">⏱️ @curso.Tbl_Duracion</span>
+            <span class="badge">📊 @curso.Tbl_Nivel</span>
+        </div>
+
+        @if (curso.clsEstaMatriculado)
+        {
+            <button class="btn-ver-curso" onclick="window.location.href='/Estudiantes/VerCurso/@curso.Tbl_Id_Curso'">
+                👉 Ver Curso
+            </button>
+        }
+        else
+        {
+            <button class="btn-matricular" onclick="window.location.href='/Estudiantes/Matricular/@curso.Tbl_Id_Curso'">
+                Matricularme
+            </button>
+        }
+    </div>
+}
+        </div>
+    </div>
+
+</body>
+</html>

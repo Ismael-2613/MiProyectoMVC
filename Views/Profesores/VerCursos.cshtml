@@ -1,0 +1,63 @@
+@model List<MiProyectoMVC.Models.Modulos.ClsModulosResponse>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ver Curso - CodeLab Academy</title>
+    <link rel="stylesheet" href="/css/menu.css" />
+    <link rel="stylesheet" href="/css/profesores.css" />
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+            <span>💻 CodeLab Academy</span>
+            <span class="version">v1.0.0</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="/Usuarios/MenuProfesores">Inicio</a></li>
+            <li><a href="/Usuarios/Login">Cerrar sesión</a></li>
+        </ul>
+    </nav>
+
+    <div class="tabla-container">
+        <p style="color:white;">ID: @ViewBag.IdCurso | Total módulos: @ViewBag.Total</p>
+        <p style="color:red;">@ViewBag.Error</p>
+
+
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:24px;">
+            <h2>📚 Módulos del Curso</h2>
+            <a href="/Profesores/AgregarModulo?idCurso=@ViewBag.IdCurso"
+               style="background:#00b4d8; color:white; padding:10px 20px; border-radius:8px; text-decoration:none; font-weight:600;">
+                + Agregar Módulo
+            </a>
+        </div>
+
+        @if (Model == null || Model.Count == 0)
+        {
+            <p style="color:#888;">No hay módulos aún. ¡Agrega el primero!</p>
+        }
+        else
+        {
+            <div style="display:flex; flex-direction:column; gap:16px;">
+                @foreach (var modulo in Model)
+                {
+                    <div style="background:#16213e; border:1px solid #0f3460; border-radius:12px; padding:20px; cursor:pointer;"
+                         onclick="window.location.href='/Profesores/VerModulo/@modulo.Id'">
+                        <h3 style="color:#00b4d8;">📁 @modulo.Nombre</h3>
+                        <p style="color:#888; margin-top:8px;">@modulo.Descripcion</p>
+                    </div>
+                }
+            </div>
+        }
+    </div>
+
+</body>
+
+</html>

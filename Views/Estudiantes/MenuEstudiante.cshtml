@@ -1,0 +1,72 @@
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>CodeLab Academy</title>
+    <link rel="stylesheet" href="/css/menu.css" />
+</head>
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="logo">
+            <span>💻 CodeLab Academy</span>
+            <span class="version">v1.0.0</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="/Usuarios/MenuEstudiante">Inicio</a></li>
+            <li><a href="/Estudiantes/Cursos">Cursos</a></li>
+            <li><a href="/Profesores/Profesores">Instructores</a></li>
+            <li><a href="/Usuarios/Login">Cerrar sesión</a></li>
+        </ul>
+    </nav>
+
+    <!-- HERO -->
+    <div class="hero">
+        <span class="badge">🟢 +500 estudiantes activos</span>
+        <h1>CodeLab Academy</h1>
+        <p>Tu plataforma de aprendizaje en desarrollo web, datos y ciberseguridad</p>
+    </div>
+
+    <!-- CARDS -->
+    <div class="cards-container">
+        <div class="card" onclick="window.location.href='/Estudiantes/Cursos'" style="cursor: pointer;">
+            <div class="icon">📚</div>
+            <h3>Mis Cursos</h3>
+            <p>Ver y matricularte en cursos disponibles</p>
+        </div>
+        <div class="card">
+            <div class="icon">📝</div>
+            <h3>Mis Tareas</h3>
+            <p>Gestión y entrega de tareas</p>
+        </div>
+        <div class="card">
+            <div class="icon">📊</div>
+            <h3>Calificaciones</h3>
+            <p>Seguimiento de tu progreso académico</p>
+        </div>
+        <div class="card" onclick="window.location.href='/Profesores/Profesores'" style="cursor: pointer;">
+            <div class="icon">👨‍🏫</div>
+            <h3>Instructores</h3>
+            <p>Conoce a nuestros instructores</p>
+        </div>
+        <div class="card">
+            <div class="icon">📢</div>
+            <h3>Anuncios</h3>
+            <p>Últimas noticias y avisos</p>
+        </div>
+        <div class="card">
+            <div class="icon">⚙️</div>
+            <h3>Mi Perfil</h3>
+            <p>Gestiona tu información personal</p>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer">
+        © 2026 CodeLab Academy · Todos los derechos reservados
+    </div>
+</body>
+</html>

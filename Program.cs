@@ -7,6 +7,8 @@ var builder = WebApplication.CreateBuilder(args);
 // Añade servicios al contenedor 
 builder.Services.AddControllersWithViews(); // Dice que se usara MVC 
 builder.Services.AddScoped<ClsAccesoDatos>(); // Permite al controller recibir clsAccesoDatos
+builder.Services.AddSession();
+builder.Services.AddHttpContextAccessor();
 
 var app = builder.Build(); // Construye la app con lo que se configuro arriba
 
@@ -18,6 +20,7 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
+app.UseSession();
 app.UseHttpsRedirection();
 app.UseRouting();
 

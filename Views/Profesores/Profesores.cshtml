@@ -1,0 +1,57 @@
+@model List<MiProyectoMVC.Models.ClsProfesores>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Instructores - CodeLab Academy</title>
+    <link rel="stylesheet" href="/css/menu.css"/>
+    <link rel="stylesheet" href="/css/profesores.css" />
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+            <span>💻 CodeLab Academy</span>
+            <span class="version">v1.0.0</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="/Usuarios/Menu">Inicio</a></li>
+            <li><a href="/Profesores/Profesores">Instructores</a></li>
+            <li><a href="/Usuarios/Login">Cerrar sesión</a></li>
+        </ul>
+    </nav>
+
+    <div class="tabla-container">
+        <h2>👨‍🏫 Instructores</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Email</th>
+                    <th>Materia</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var profesor in Model)
+                {
+                    <tr>
+                        <td>@profesor.Tbl_Id_Profesores</td>
+                        <td>@profesor.Tbl_Nombre</td>
+                        <td>@profesor.Tbl_Apellido</td>
+                        <td>@profesor.Tbl_Emaiil</td>
+                        <td><span class="badge-materia">@profesor.Tbl_Materia</span></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>

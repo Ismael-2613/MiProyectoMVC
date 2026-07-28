@@ -1,0 +1,67 @@
+@model MiProyectoMVC.Models.ClsMatriculas
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Matricularse - CodeLab Academy</title>
+    <link rel="stylesheet" href="/css/menu.css" />
+    <link rel="stylesheet" href="/css/estilos.css" />
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+            <span>💻 CodeLab Academy</span>
+            <span class="version">v1.0.0</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="/Usuarios/MenuEstudiante">Inicio</a></li>
+            <li><a href="/Estudiantes/Cursos">Cursos</a></li>
+            <li><a href="/Usuarios/Login">Cerrar sesión</a></li>
+        </ul>
+    </nav>
+
+    <div style="display:flex; justify-content:center; align-items:center; min-height:80vh;">
+        <div class="card">
+            <h2>📚 Matricularse</h2>
+            <p class="subtitle">Completa tus datos para inscribirte</p>
+
+            @if (ViewBag.Exito == true)
+            {
+                <div class="success">
+                    ✅ @ViewBag.Mensaje <br />
+                    <small>Te enviaremos un correo cuando inicien las clases.</small>
+                </div>
+            }
+            else if (ViewBag.Exito == false)
+            {
+                <div class="error">❌ @ViewBag.Mensaje</div>
+            }
+
+            <form asp-action="Matricular" method="post">
+                <input type="hidden" name="Tbl_Fk_Id_Curso" value="@ViewBag.IdCurso" />
+
+                <div class="form-group">
+                    <label>Nombre completo</label>
+                    <input asp-for="Tbl_Nombre" placeholder="Tu nombre" />
+                </div>
+
+                <div class="form-group">
+                    <label>Usuario</label>
+                    <input asp-for="Tbl_Email" placeholder="Tu usuario" />
+                </div>
+
+                <button type="submit">Matricularme</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html>
