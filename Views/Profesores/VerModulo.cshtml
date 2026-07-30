@@ -1,0 +1,77 @@
+@model List<MiProyectoMVC.Models.Contenido.ClsContenidoResponse>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ver Módulo - CodeLab Academy</title>
+    <link rel="stylesheet" href="/css/menu.css" />
+    <link rel="stylesheet" href="/css/profesores.css" />
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+            <span>💻 CodeLab Academy</span>
+            <span class="version">v1.0.0</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="/Usuarios/MenuProfesores">Inicio</a></li>
+            <li><a href="/Usuarios/Login">Cerrar sesión</a></li>
+        </ul>
+    </nav>
+
+    <div class="tabla-container">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:24px;">
+            <h2>📂 Contenido del Módulo</h2>
+            <a href="/Profesores/AgregarContenido?idCurso=@ViewBag.IdCurso"
+               style="background:#00b4d8; color:white; padding:10px 20px; border-radius:8px; text-decoration:none; font-weight:600;">
+                + Agregar Contenido
+            </a>
+        </div>
+
+        @if (Model == null || Model.Count == 0)
+        {
+            <p style="color:#888;">No hay contenido aún. ¡Agrega el primero!</p>
+        }
+        else
+        {
+            <div style="display:flex; flex-direction:column; gap:16px;">
+                @foreach (var contenido in Model)
+                {
+                    <div style="background:#16213e; border:1px solid #0f3460; border-radius:12px; padding:20px;">
+                        <h3 style="color:#00b4d8;">
+                            @if (contenido.Tipo == "Video")
+                            {
+                                <span>🎥</span>
+                            }
+                            else
+                            {
+                                <span>📄</span>
+                            }
+                            @contenido.Titulo
+                        </h3>
+                        <p style="color:#888; margin-top:8px;">@contenido.Url</p>
+                    </div>
+                    <a href="@contenido.Url" target="_blank"
+                       style="background:#0f3460; color:#00b4d8; padding:8px 16px; border-radius:8px; text-decoration:none; font-weight:600; border:1px solid #00b4d8;">
+                        👁 Ver
+                    </a>
+
+                    <a href="@contenido.Url" download
+                       style="background:#00b4d8; color:white; padding:8px 16px; border-radius:8px; text-decoration:none; font-weight:600;">
+                        ⬇ Descargar
+                    </a>
+                }
+            </div>
+        }
+    </div>
+
+</body>
+
+</html>

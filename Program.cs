@@ -1,4 +1,5 @@
 using MiProyectoMVC.Data;
+using Microsoft.AspNetCore.Http.Features;
 
 // Configura los servicios que usara la app 
 // Crear el constructor de la aplicacion
@@ -9,6 +10,15 @@ builder.Services.AddControllersWithViews(); // Dice que se usara MVC
 builder.Services.AddScoped<ClsAccesoDatos>(); // Permite al controller recibir clsAccesoDatos
 builder.Services.AddSession();
 builder.Services.AddHttpContextAccessor();
+builder.Services.Configure<FormOptions>(options =>
+{
+    options.MultipartBodyLengthLimit = 524288000; // 500 MB
+});
+
+builder.WebHost.ConfigureKestrel(options =>
+{
+    options.Limits.MaxRequestBodySize = 524288000; // 500 MB
+});
 
 var app = builder.Build(); // Construye la app con lo que se configuro arriba
 

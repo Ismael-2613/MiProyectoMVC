@@ -34,6 +34,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXN0dWRpYW50ZXNcTWVudUVzdHVkaWFudGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/usuario/Downloads/demo/demo/MiProyectoMVC/Views/Profesores/AgregarContenido.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZmVzb3Jlc1xBZ3JlZ2FyQ29udGVuaWRvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/usuario/Downloads/demo/demo/MiProyectoMVC/Views/Profesores/AgregarModulo.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZmVzb3Jlc1xBZ3JlZ2FyTW9kdWxvLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -48,6 +52,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/usuario/Downloads/demo/demo/MiProyectoMVC/Views/Profesores/VerCursos.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZmVzb3Jlc1xWZXJDdXJzb3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/usuario/Downloads/demo/demo/MiProyectoMVC/Views/Profesores/VerModulo.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZmVzb3Jlc1xWZXJNb2R1bG8uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/usuario/Downloads/demo/demo/MiProyectoMVC/Views/Shared/Error.cshtml]
