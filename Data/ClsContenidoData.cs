@@ -13,7 +13,7 @@ namespace MiProyectoMVC.Data
             _db = db;
         }
 
-        public List<ClsContenidoResponse> ListarContenido(int idCurso)
+        public List<ClsContenidoResponse> ListarContenido(int idModulo)
         {
             List<ClsContenidoResponse> lista = new List<ClsContenidoResponse>();
 
@@ -21,7 +21,7 @@ namespace MiProyectoMVC.Data
             {
                 SqlCommand cmd = new SqlCommand("SP_ListarContenido", conn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@Fk_Id_Curso", idCurso);
+                cmd.Parameters.AddWithValue("@Fk_Id_Modulo", idModulo);
 
                 SqlDataReader reader = cmd.ExecuteReader();
 
@@ -47,7 +47,7 @@ namespace MiProyectoMVC.Data
                 SqlCommand cmd = new SqlCommand("SP_AgregarContenido", conn);
                 cmd.CommandType = CommandType.StoredProcedure;
 
-                cmd.Parameters.AddWithValue("@Fk_Id_Curso", contenido.Tbl_Fk_Id_Curso);
+                cmd.Parameters.AddWithValue("@Fk_Id_Modulo", contenido.Tbl_Fk_Id_Modulo);
                 cmd.Parameters.AddWithValue("@Titulo", contenido.Tbl_Titulo);
                 cmd.Parameters.AddWithValue("@Tipo", contenido.Tbl_Tipo);
                 cmd.Parameters.AddWithValue("@Url", contenido.Tbl_Url);
@@ -57,11 +57,11 @@ namespace MiProyectoMVC.Data
                 if (reader.Read())
                     return new ClsContenidoResponse
                     {
-                        Status = int.Parse(reader["status"].ToString()),
+                        Status = int.Parse(reader["status"].ToString()!),
                         Message = reader["message"].ToString()
                     };
 
-                return null;
+                return null!;
             }
         }
     }

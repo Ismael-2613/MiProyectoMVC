@@ -3,6 +3,9 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Data.SqlClient;
 using MiProyectoMVC.Data;
 using MiProyectoMVC.Models;
+using MiProyectoMVC.Models.Contenido;
+using MiProyectoMVC.Models.Modulos;
+
 
 namespace MiProyectoMVC;
 
@@ -89,7 +92,27 @@ public class UsuariosController : Controller
                 return View();
             }
         }
+
+        
     }
+
+    [HttpGet]
+        public IActionResult VerCurso(int id)
+        {
+            ClsModulosData modulosData = new ClsModulosData(_db);
+            List<ClsModulosResponse> listaModulos = modulosData.ListarModulos(id);
+            ViewBag.IdCurso = id;
+            return View(listaModulos);
+        }
+
+        [HttpGet]
+        public IActionResult VerModulo(int id)
+        {
+            ClsContenidoData contenidoData = new ClsContenidoData(_db);
+            List<ClsContenidoResponse> listaContenido = contenidoData.ListarContenido(id);
+            ViewBag.IdCurso = id;
+            return View(listaContenido);
+        }
 
 
 }

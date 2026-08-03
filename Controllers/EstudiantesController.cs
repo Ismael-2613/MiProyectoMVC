@@ -1,6 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
 using MiProyectoMVC.Data;
 using MiProyectoMVC.Models;
+using MiProyectoMVC.Models.Modulos;
+using MiProyectoMVC.Models.Contenido;
 
 namespace MiProyectoMVC.Controllers
 {
@@ -34,6 +36,25 @@ namespace MiProyectoMVC.Controllers
 
 
 
+
+        [HttpGet]
+        public IActionResult VerCurso(int id)
+        {
+            ClsModulosData modulosData = new ClsModulosData(_db);
+            List<ClsModulosResponse> listaModulos = modulosData.ListarModulos(id);
+            ViewBag.IdCurso = id;
+            ViewBag.Total = listaModulos.Count;
+            return View(listaModulos);
+        }
+
+        [HttpGet]
+        public IActionResult VerModulo(int id)
+        {
+            ClsContenidoData contenidoData = new ClsContenidoData(_db);
+            List<ClsContenidoResponse> listaContenido = contenidoData.ListarContenido(id);
+            ViewBag.IdCurso = id;
+            return View(listaContenido);
+        }
 
         [HttpPost]
         public IActionResult Matricular(ClsMatriculas matricula)

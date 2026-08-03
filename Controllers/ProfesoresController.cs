@@ -60,30 +60,32 @@ public class ProfesoresController : Controller
 
     // Ver contenido de un módulo
     [HttpGet]
-    public IActionResult VerModulo(int id)
+    public IActionResult VerModulo(int id, int idCurso)
     {
         ClsContenidoData contenidoData = new ClsContenidoData(_db);
-        List<ClsContenidoResponse> listaContenido = contenidoData.ListarContenido(id);
-        ViewBag.IdCurso = id;
+        List<ClsContenidoResponse> listaContenido = contenidoData.ListarContenido(id); // ← id es el módulo
+        ViewBag.IdModulo = id;
+        ViewBag.IdCurso = idCurso;
         return View(listaContenido);
     }
 
-    // Agregar contenido GET
     [HttpGet]
-    public IActionResult AgregarContenido(int idCurso)
+    public IActionResult AgregarContenido(int idModulo, int idCurso)
     {
+        ViewBag.IdModulo = idModulo;
         ViewBag.IdCurso = idCurso;
         return View();
     }
 
-    // Agregar contenido POST
     [HttpPost]
     public async Task<IActionResult> AgregarContenido(ClsContenidoRequest contenido, IFormFile archivo)
     {
+        Console.WriteLine("IdModulo recibido: " + contenido.Tbl_Fk_Id_Modulo);
+
         if (archivo == null || archivo.Length == 0)
         {
             ViewBag.Error = "Debes seleccionar un archivo";
-            ViewBag.IdCurso = contenido.Tbl_Fk_Id_Curso;
+            ViewBag.IdModulo = contenido.Tbl_Fk_Id_Modulo;
             return View();
         }
 
@@ -107,11 +109,11 @@ public class ProfesoresController : Controller
         ClsContenidoResponse resultado = contenidoData.AgregarContenido(contenido);
 
         if (resultado != null && resultado.Status == 1)
-            return RedirectToAction("VerModulo", new { id = contenido.Tbl_Fk_Id_Curso });
+            return RedirectToAction("VerModulo", new { id = contenido.Tbl_Fk_Id_Modulo, idCurso = Request.Form["idCurso"] });
         else
         {
-            ViewBag.Error = "Error al agregar contenido";
-            ViewBag.IdCurso = contenido.Tbl_Fk_Id_Curso;
+            ViewBag.Error = resultado?.Message ?? "Error al agregar contenido";
+            ViewBag.IdModulo = contenido.Tbl_Fk_Id_Modulo;
             return View();
         }
     }

@@ -1,0 +1,56 @@
+@model List<MiProyectoMVC.Models.Modulos.ClsModulosResponse>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ver Curso - CodeLab Academy</title>
+    <link rel="stylesheet" href="/css/menu.css" />
+    <link rel="stylesheet" href="/css/profesores.css" />
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+            <span>💻 CodeLab Academy</span>
+            <span class="version">v1.0.0</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="/Usuarios/MenuEstudiantes">Inicio</a></li>
+            <li><a href="/Estudiantes/Cursos">Cursos</a></li>
+            <li><a href="/Usuarios/Login">Cerrar sesión</a></li>
+        </ul>
+    </nav>
+
+    <div class="tabla-container">
+        <p style="color:white;">ID: @ViewBag.IdCurso | Total módulos: @ViewBag.Total</p>
+
+        <h2>📚 Módulos del Curso</h2>
+
+        @if (Model == null || Model.Count == 0)
+        {
+            <p style="color:#888;">Este curso aún no tiene módulos.</p>
+        }
+        else
+        {
+            <div style="display:flex; flex-direction:column; gap:16px;">
+                @foreach (var modulo in Model)
+                {
+                    <div style="background:#16213e; border:1px solid #0f3460; border-radius:12px; padding:20px; cursor:pointer;"
+                         onclick="window.location.href='/Estudiantes/VerModulo/@modulo.Id'">
+                        <h3 style="color:#00b4d8;">📁 @modulo.Nombre</h3>
+                        <p style="color:#888; margin-top:8px;">@modulo.Descripcion</p>
+                    </div>
+                }
+            </div>
+        }
+    </div>
+
+</body>
+
+</html>

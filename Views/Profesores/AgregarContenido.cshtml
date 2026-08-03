@@ -5,12 +5,14 @@
 
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <title>Agregar Contenido - CodeLab Academy</title>
     <link rel="stylesheet" href="/css/menu.css" />
     <link rel="stylesheet" href="/css/estilos.css" />
 </head>
+
 <body>
 
     <nav class="navbar">
@@ -35,7 +37,8 @@
             }
 
             <form asp-action="AgregarContenido" method="post" enctype="multipart/form-data">
-                <input type="hidden" name="Tbl_Fk_Id_Curso" value="@ViewBag.IdCurso" />
+                <input type="hidden" name="Tbl_Fk_Id_Modulo" value="@ViewBag.IdModulo" />
+                <input type="hidden" name="idCurso" value="@ViewBag.IdCurso" />
 
                 <div class="form-group">
                     <label>Título</label>
@@ -44,7 +47,8 @@
 
                 <div class="form-group">
                     <label>Tipo</label>
-                    <select name="Tbl_Tipo" style="width:100%; padding:12px; border:2px solid #e0e0e0; border-radius:8px; font-size:15px; background:white;">
+                    <select name="Tbl_Tipo"
+                            style="width:100%; padding:12px; border:2px solid #e0e0e0; border-radius:8px; font-size:15px; background:white;">
                         <option value="Video">🎥 Video</option>
                         <option value="Documento">📄 Documento</option>
                     </select>
@@ -62,4 +66,5 @@
     </div>
 
 </body>
+
 </html>

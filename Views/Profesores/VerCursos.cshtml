@@ -49,7 +49,7 @@
                 @foreach (var modulo in Model)
                 {
                     <div style="background:#16213e; border:1px solid #0f3460; border-radius:12px; padding:20px; cursor:pointer;"
-                         onclick="window.location.href='/Profesores/VerModulo/@modulo.Id'">
+                         onclick="window.location.href='/Profesores/VerModulo?id=@modulo.Id&idCurso=@ViewBag.IdCurso'">
                         <h3 style="color:#00b4d8;">📁 @modulo.Nombre</h3>
                         <p style="color:#888; margin-top:8px;">@modulo.Descripcion</p>
                     </div>
