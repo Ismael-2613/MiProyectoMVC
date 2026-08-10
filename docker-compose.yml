@@ -1,0 +1,24 @@
+services:
+  web:
+    build: .
+    ports:
+      - "9090:8080"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:8080
+    depends_on:
+      - sqlserver
+
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2025-latest
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=MiPassword123!
+    ports:
+      - "1433:1433"
+    volumes:
+      - sqldata:/var/lib/sqlserver/data
+      - ./backup:/var/opt/mssql/backup
+    
+volumes:
+  sqldata:
