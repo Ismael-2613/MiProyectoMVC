@@ -1,5 +1,5 @@
 #!/bin/bash
-sleep 30
+sleep 60
 /opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P MiPassword123! -Q "
 RESTORE DATABASE ProyectoMVC
 FROM DISK = '/var/opt/mssql/backup/ProyectoSO.bak'

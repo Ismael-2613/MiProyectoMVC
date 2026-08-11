@@ -8,89 +8,88 @@ build_property.ProjectTypeGuids =
 build_property.InvariantGlobalization = 
 build_property.PlatformNeutralAssembly = 
 build_property.EnforceExtendedAnalyzerRules = 
-build_property.EntryPointFilePath = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = MiProyectoMVC
 build_property.RootNamespace = MiProyectoMVC
-build_property.ProjectDir = C:\Users\ismae\OneDrive\Documentos\ProyectosVS\proyectoSO\MiProyectoMVC\
+build_property.ProjectDir = C:\Users\usuario\Downloads\proyecto\MiProyectoMVC\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
-build_property.RazorLangVersion = 10.0
+build_property.RazorLangVersion = 9.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\ismae\OneDrive\Documentos\ProyectosVS\proyectoSO\MiProyectoMVC
+build_property.MSBuildProjectDirectory = C:\Users\usuario\Downloads\proyecto\MiProyectoMVC
 build_property._RazorSourceGeneratorDebug = 
 build_property.EffectiveAnalysisLevelStyle = 10.0
 build_property.EnableCodeStyleSeverity = 
 
-[C:/Users/ismae/OneDrive/Documentos/ProyectosVS/proyectoSO/MiProyectoMVC/Views/Estudiantes/Cursos.cshtml]
+[C:/Users/usuario/Downloads/proyecto/MiProyectoMVC/Views/Estudiantes/Cursos.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXN0dWRpYW50ZXNcQ3Vyc29zLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ismae/OneDrive/Documentos/ProyectosVS/proyectoSO/MiProyectoMVC/Views/Estudiantes/Matricular.cshtml]
+[C:/Users/usuario/Downloads/proyecto/MiProyectoMVC/Views/Estudiantes/Matricular.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXN0dWRpYW50ZXNcTWF0cmljdWxhci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ismae/OneDrive/Documentos/ProyectosVS/proyectoSO/MiProyectoMVC/Views/Estudiantes/MenuEstudiante.cshtml]
+[C:/Users/usuario/Downloads/proyecto/MiProyectoMVC/Views/Estudiantes/MenuEstudiante.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXN0dWRpYW50ZXNcTWVudUVzdHVkaWFudGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ismae/OneDrive/Documentos/ProyectosVS/proyectoSO/MiProyectoMVC/Views/Estudiantes/VerCurso.cshtml]
+[C:/Users/usuario/Downloads/proyecto/MiProyectoMVC/Views/Estudiantes/VerCurso.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXN0dWRpYW50ZXNcVmVyQ3Vyc28uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ismae/OneDrive/Documentos/ProyectosVS/proyectoSO/MiProyectoMVC/Views/Estudiantes/VerModulo.cshtml]
+[C:/Users/usuario/Downloads/proyecto/MiProyectoMVC/Views/Estudiantes/VerModulo.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXN0dWRpYW50ZXNcVmVyTW9kdWxvLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ismae/OneDrive/Documentos/ProyectosVS/proyectoSO/MiProyectoMVC/Views/Profesores/AgregarContenido.cshtml]
+[C:/Users/usuario/Downloads/proyecto/MiProyectoMVC/Views/Profesores/AgregarContenido.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZmVzb3Jlc1xBZ3JlZ2FyQ29udGVuaWRvLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ismae/OneDrive/Documentos/ProyectosVS/proyectoSO/MiProyectoMVC/Views/Profesores/AgregarModulo.cshtml]
+[C:/Users/usuario/Downloads/proyecto/MiProyectoMVC/Views/Profesores/AgregarModulo.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZmVzb3Jlc1xBZ3JlZ2FyTW9kdWxvLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ismae/OneDrive/Documentos/ProyectosVS/proyectoSO/MiProyectoMVC/Views/Profesores/MenuProfesores.cshtml]
+[C:/Users/usuario/Downloads/proyecto/MiProyectoMVC/Views/Profesores/MenuProfesores.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZmVzb3Jlc1xNZW51UHJvZmVzb3Jlcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ismae/OneDrive/Documentos/ProyectosVS/proyectoSO/MiProyectoMVC/Views/Profesores/Profesores.cshtml]
+[C:/Users/usuario/Downloads/proyecto/MiProyectoMVC/Views/Profesores/Profesores.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZmVzb3Jlc1xQcm9mZXNvcmVzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ismae/OneDrive/Documentos/ProyectosVS/proyectoSO/MiProyectoMVC/Views/Profesores/VerCursos.cshtml]
+[C:/Users/usuario/Downloads/proyecto/MiProyectoMVC/Views/Profesores/VerCursos.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZmVzb3Jlc1xWZXJDdXJzb3MuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ismae/OneDrive/Documentos/ProyectosVS/proyectoSO/MiProyectoMVC/Views/Profesores/VerModulo.cshtml]
+[C:/Users/usuario/Downloads/proyecto/MiProyectoMVC/Views/Profesores/VerModulo.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZmVzb3Jlc1xWZXJNb2R1bG8uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ismae/OneDrive/Documentos/ProyectosVS/proyectoSO/MiProyectoMVC/Views/Shared/Error.cshtml]
+[C:/Users/usuario/Downloads/proyecto/MiProyectoMVC/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ismae/OneDrive/Documentos/ProyectosVS/proyectoSO/MiProyectoMVC/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/usuario/Downloads/proyecto/MiProyectoMVC/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ismae/OneDrive/Documentos/ProyectosVS/proyectoSO/MiProyectoMVC/Views/Usuarios/Login.cshtml]
+[C:/Users/usuario/Downloads/proyecto/MiProyectoMVC/Views/Usuarios/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb3NcTG9naW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ismae/OneDrive/Documentos/ProyectosVS/proyectoSO/MiProyectoMVC/Views/Usuarios/Registrar.cshtml]
+[C:/Users/usuario/Downloads/proyecto/MiProyectoMVC/Views/Usuarios/Registrar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb3NcUmVnaXN0cmFyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ismae/OneDrive/Documentos/ProyectosVS/proyectoSO/MiProyectoMVC/Views/_ViewImports.cshtml]
+[C:/Users/usuario/Downloads/proyecto/MiProyectoMVC/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ismae/OneDrive/Documentos/ProyectosVS/proyectoSO/MiProyectoMVC/Views/_ViewStart.cshtml]
+[C:/Users/usuario/Downloads/proyecto/MiProyectoMVC/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ismae/OneDrive/Documentos/ProyectosVS/proyectoSO/MiProyectoMVC/Views/Shared/_Layout.cshtml]
+[C:/Users/usuario/Downloads/proyecto/MiProyectoMVC/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-jeg3itm05f
