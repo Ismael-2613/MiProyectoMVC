@@ -10,7 +10,7 @@
     <meta charset="UTF-8">
     <title>Matricularse - CodeLab Academy</title>
     <link rel="stylesheet" href="/css/menu.css" />
-    <link rel="stylesheet" href="/css/estilos.css" />
+    <link rel="stylesheet" href="/css/matricular.css" />
 </head>
 
 <body>
@@ -27,38 +27,44 @@
         </ul>
     </nav>
 
-    <div style="display:flex; justify-content:center; align-items:center; min-height:80vh;">
-        <div class="card">
-            <h2>📚 Matricularse</h2>
+    <div class="matricular-container">
+        <div class="matricular-card">
+            <h2>Matricularse</h2>
             <p class="subtitle">Completa tus datos para inscribirte</p>
 
-            @if (ViewBag.Exito == true)
+            @if (ViewBag.Exito == true || ViewBag.YaMatriculado == true)
             {
                 <div class="success">
                     ✅ @ViewBag.Mensaje <br />
                     <small>Te enviaremos un correo cuando inicien las clases.</small>
                 </div>
+                <a href="/Estudiantes/VerCurso/@ViewBag.IdCurso" class="btn-ver-curso">
+                    Ver Curso
+                </a>
             }
-            else if (ViewBag.Exito == false)
+            else
             {
-                <div class="error">❌ @ViewBag.Mensaje</div>
+                @if (ViewBag.Exito == false)
+                {
+                    <div class="error">❌ @ViewBag.Mensaje</div>
+                }
+
+                <form asp-action="Matricular" method="post">
+                    <input type="hidden" name="Tbl_Fk_Id_Curso" value="@ViewBag.IdCurso" />
+
+                    <div class="form-group">
+                        <label>Nombre completo</label>
+                        <input asp-for="Tbl_Nombre" placeholder="Tu nombre" />
+                    </div>
+
+                    <div class="form-group">
+                        <label>Usuario</label>
+                        <input asp-for="Tbl_Email" placeholder="Tu usuario" />
+                    </div>
+
+                    <button type="submit" class="btn-matricular">Matricularme</button>
+                </form>
             }
-
-            <form asp-action="Matricular" method="post">
-                <input type="hidden" name="Tbl_Fk_Id_Curso" value="@ViewBag.IdCurso" />
-
-                <div class="form-group">
-                    <label>Nombre completo</label>
-                    <input asp-for="Tbl_Nombre" placeholder="Tu nombre" />
-                </div>
-
-                <div class="form-group">
-                    <label>Usuario</label>
-                    <input asp-for="Tbl_Email" placeholder="Tu usuario" />
-                </div>
-
-                <button type="submit">Matricularme</button>
-            </form>
         </div>
     </div>
 
