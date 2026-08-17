@@ -28,12 +28,12 @@
 
     <div style="display:flex; justify-content:center; align-items:center; min-height:80vh;">
         <div class="card">
-            <h2>📁 Agregar Módulo</h2>
+            <h2> Agregar Módulo</h2>
             <p class="subtitle">Crea un nuevo módulo para el curso</p>
 
             @if (ViewBag.Error != null)
             {
-                <div class="error">❌ @ViewBag.Error</div>
+                <div class="error"> @ViewBag.Error</div>
             }
 
             <form asp-action="AgregarModulo" method="post">
