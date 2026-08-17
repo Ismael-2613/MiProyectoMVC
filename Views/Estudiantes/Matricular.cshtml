@@ -46,7 +46,7 @@
             {
                 @if (ViewBag.Exito == false)
                 {
-                    <div class="error">❌ @ViewBag.Mensaje</div>
+                    <div class="error"> @ViewBag.Mensaje</div>
                 }
 
                 <form asp-action="Matricular" method="post">

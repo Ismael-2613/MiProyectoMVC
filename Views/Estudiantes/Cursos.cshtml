@@ -15,7 +15,7 @@
 
     <nav class="navbar">
         <div class="logo">
-            <span>💻 CodeLab Academy</span>
+            <span> CodeLab Academy</span>
             <span class="version">v1.0.0</span>
         </div>
         <ul class="nav-links">
@@ -26,7 +26,7 @@
     </nav>
 
     <div class="cursos-container">
-        <h2>📚 Cursos Disponibles</h2>
+        <h2> Cursos Disponibles</h2>
         <p class="subtitle">Selecciona un curso para matricularte</p>
 
         <div class="cursos-grid">
@@ -37,14 +37,14 @@
         <h3>@curso.Tbl_Nombre</h3>
         <p>@curso.Tbl_Descripcion</p>
         <div class="curso-info">
-            <span class="badge">⏱️ @curso.Tbl_Duracion</span>
-            <span class="badge">📊 @curso.Tbl_Nivel</span>
+            <span class="badge"> @curso.Tbl_Duracion</span>
+            <span class="badge"> @curso.Tbl_Nivel</span>
         </div>
 
         @if (curso.clsEstaMatriculado)
         {
             <button class="btn-ver-curso" onclick="window.location.href='/Estudiantes/VerCurso/@curso.Tbl_Id_Curso'">
-                👉 Ver Curso
+                 Ver Curso
             </button>
         }
         else
